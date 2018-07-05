@@ -150,7 +150,6 @@ $(window).on('load', function() {
             if (text.trim() === '') {
                 return;
             }
-            $('.message_input').val('');
             $messages = $('.messages');
             message_side = message_side === 'left' ? 'right' : 'left';
             message = new Message({
@@ -173,6 +172,7 @@ $(window).on('load', function() {
                     console.log(m)
                 }
             });
+            $('.message_input').val('');
         };
         $('.send_message').click(function (e) {
             return sendMessage()
